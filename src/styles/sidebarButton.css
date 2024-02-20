@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+}
+.btn-body {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem auto;
+  color: #9ebcc5;
+  transition: all 0.4s ease;
+}
+.btn-body.active {
+  background-color: #f5f8f9;
+  color: #6f848a;
+
+  transform: scale(1.2);
+}
+.btn-body:hover {
+  color: #5f7176;
+  background-color: #c5d7dc;
+}
+.btn-title {
+  margin: 0.5rem auto;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
