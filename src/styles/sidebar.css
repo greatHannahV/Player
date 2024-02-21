@@ -1,16 +1,35 @@
-.sidebar-container {
+/* .sidebar-container {
   width: 11rem;
-  height: 100vh;
+  height: 100%;
   background-color: #ecf2f3;
   align-items: center;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+  /*
+  position: fixed; */
+
+/* }
 .profile-img {
   width: 5rem;
   height: 5rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   margin-top: 2rem;
+}  */
+.sidebar-container {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ecf2f3;
+  position: fixed;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
 }

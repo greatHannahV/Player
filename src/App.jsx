@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
 import Library from './pages/Library'
 import Feed from './pages/Feed'
 import Player from './pages/Player'

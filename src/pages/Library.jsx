@@ -3,17 +3,18 @@ import { apiClient } from '../spotify'
 import '../styles/library.css'
 import { IconContext } from 'react-icons'
 import { AiFillPlayCircle } from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
 
 function Library() {
   const [playlists, setPlaylists] = useState(null)
   useEffect(() => {
     apiClient.get('me/playlists').then(function (response) {
       setPlaylists(response.data.items)
-      console.log(response.data.items)
     })
   }, [])
+  const navigate = useNavigate()
   const playPlaylist = (id) => {
-    console.log('click')
+    navigate('/player', { state: { id: id } })
   }
   return (
     <div className="screen-container">
