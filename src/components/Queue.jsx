@@ -1,6 +1,24 @@
 import '../styles/queue.css'
-function Queue() {
-  return <div>ddgfgfgdbbbbbbbbbbbb</div>
+function Queue({ tracks, setCurrentIndex }) {
+  return (
+    <div className="queue-container flex">
+      <div className="queue flex">
+        <p className="upNext">Up next</p>
+        <div className="queue-list">
+          {tracks?.map((track, index) => (
+            <div
+              className="queue-item flex "
+              onClick={() => setCurrentIndex(index)}
+              key={index}
+            >
+              <p className="track-name">{track?.track?.name}</p>
+              <p>0.30</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Queue
