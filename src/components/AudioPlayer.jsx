@@ -12,10 +12,9 @@ export default function AudioPLayer({
 }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [trackProgress, setTrackProgress] = useState(0)
-  var audioSrc = total[currentIndex]?.track.preview_url
+  let audioSrc = total[currentIndex]?.track.preview_url
 
   const audioRef = useRef(new Audio(total[0]?.track.preview_url))
-
   const intervalRef = useRef()
 
   const isReady = useRef(false)
@@ -104,7 +103,7 @@ export default function AudioPLayer({
           percentage={currentPercentage}
           isPlaying={true}
           image={currentTrack?.album?.images[0]?.url}
-          size={300}
+          size={290}
           color="#8ea9b1"
         />
       </div>

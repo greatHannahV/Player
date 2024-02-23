@@ -1,5 +1,5 @@
 const Circle = ({ color, percentage, size, strokeWidth }) => {
-  const radius = size / 2 - 10
+  const radius = size / 2 - 20
   const circ = 2 * Math.PI * radius - 20
   const strokePct = ((100 - Math.round(percentage)) * circ) / 100
 
@@ -22,9 +22,9 @@ function ProgressCircle({ percentage, isPlaying, size, color, image }) {
     <div className="progress-circle flex">
       <svg width={size} height={size}>
         <g>
-          <Circle strokeWidth={'0.4rem'} color="#274d40" size={size} />
+          <Circle strokeWidth={'0.5rem'} color="#274d40" size={size} />
           <Circle
-            strokeWidth={'0.6rem'}
+            strokeWidth={'0.4rem'}
             color={color}
             percentage={percentage}
             size={size}
@@ -32,7 +32,7 @@ function ProgressCircle({ percentage, isPlaying, size, color, image }) {
         </g>
         <defs>
           <clipPath id="myCircle">
-            <circle cx="50%" cy="50%" r={size / 2 - 30} fill="#FFFFFF" />
+            <circle cx="50%" cy="50%" r={size / 2 - 40} fill="#FFFFFF" />
           </clipPath>
           <clipPath id="myInnerCircle">
             <circle cx="50%" cy="50%" r={size / 2 - 100} fill="#FFFFFF" />

@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 }
 
 .song-title {
@@ -29,7 +28,20 @@
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
+@media (max-width: 1090px) {
+  .player-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .player-left-body {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .player-rigth-body {
+    width: 100%;
+  }
+}
 .song-artist {
   color: #274d40;
   font-size: 2rem;
